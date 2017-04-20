@@ -6188,7 +6188,7 @@ Potree.Annotation = function(scene, args = {}){
 			return;
 		}
 	
-		var animationDuration = 800;
+		var animationDuration = 4000;
 		var easing = TWEEN.Easing.Quartic.Out;
 
 		{ // animate camera position
@@ -12313,12 +12313,12 @@ function ProgressBar(){
 
 ProgressBar.prototype.hide = function(){
 	this.element.style.opacity = 0;
-	this.element.style.transition = "all 0.2s ease";
+	this.element.style.transition = "all 0.5s ease";
 };
 
 ProgressBar.prototype.show = function(){
 	this.element.style.opacity = this.maxOpacity;
-	this.element.style.transition = "all 0.2s ease";
+	this.element.style.transition = "all 0.5s ease";
 };
 
 Object.defineProperty(ProgressBar.prototype, "progress", {
