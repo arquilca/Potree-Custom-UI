@@ -5,6 +5,7 @@ README
 
 ## Downloads
 Make sure you have the following installed in order to view the project
+<br>
 *[Potree](http://potree.org/)
 <br>
 *[PotreeConverter and binaries](https://github.com/potree/PotreeConverter/releases)
