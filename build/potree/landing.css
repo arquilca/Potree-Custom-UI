@@ -1,0 +1,24 @@
+body {
+background-color: #a0a0a0;
+
+}
+
+
+.inner {
+  padding: 30px;
+}
+
+/* Cover */
+.cover {
+  padding: 0 20px;
+  width: 600px;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+.cover .btn-lg {
+  padding: 10px 20px;
+  font-weight: bold;
