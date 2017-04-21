@@ -109,17 +109,23 @@
 			// 	"title": "Pool and Pavilion"
 			// });
 
-
+//TODO: Display/Fix svg icon in description
 			sceneVZP.addAnnotation([1.74, 6.21, -0.46], {
-				"title": "Ceiling Mosaic",
 				"cameraPosition": [1.74, 6.21, -0.46],
 				"cameraTarget": [1.733, 6.20, -0.46],
 				"description":"<center>Robert W. Chanler Painted Pool Ceiling Mosaic</center><br> Lorem ipsum dolor sit amet,  adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tincidunt nunc pulvinar sapien et ligula ullamcorper malesuada proin. <br><br>Ac placerat vestibulum lectus mauris. Arcu odio ut sem nulla. Id diam maecenas ultricies mi eget mauris pharetra et ultrices. Blandit volutpat maecenas volutpat blandit aliquam etiam erat velit.<br><br><center><a href='http://www.chrismillsconservation.com/vizcaya-museum-and-gardens.html' target='blank'>" + 
 				"<img src='http://www.chrismillsconservation.com/uploads/2/4/4/3/24434294/5060287_orig.jpg' width='500px' height='300px'/>" +
-				"</a></center>"
+				"</a></center>",
+				"title": "Ceiling Mosaic",
+				"actions": [{
+					"icon": Potree.resourcePath + "/icons/Information-icon.svg",
+					"onclick": function(){
+						sceneVZP.view.lookAt(new THREE.Vector3(1.733, 6.20, -0.46));
+					}
+				}]
 			});
 
-//TODO: Get new point -this one rotates into wall
+//TODO: Get better coordinates -this set slightly rotates into wall
 			sceneVZP.addAnnotation([1.80, -1.51, 0.02], {
 				"cameraPosition": [1.80, -1.51, 0.02],
 				"cameraTarget": [1.79, -1.50, 0.02],
@@ -145,29 +151,7 @@
 			});
 });
 
-		// viewer.view.position.set(590030, 731767, 1007);//TODO: add correct coordinates
-		// viewer.view.lookAt(new THREE.Vector3(589844, 231376, 710)); //TODO: add correct coordinates
-
-		// viewer.addAnnotation (
-		// //  (new THREE.Vector3(-4.66, 10, - 1), 
-		// { //TODO: Where is this value derived?
-		// 	"cameraTarget": new THREE.Vector3(1.44, 6.45, -0.55), //configured
-		// 	"cameraPosition": new THREE.Vector3(1.45, 6.46, -0.55) //configured
-			
-		// });
-
-	// 	viewer.addAnnotation(new THREE.Vector3(-5.25, 9.8,2.59 ), {//TODO: Pretty good spot, fine tune for accuracy	
-	// 		"title": Ceiling,			
-	// 		"description": "Ceiling of Vizcaya pavilion." + 
-	// 			"<br><br><center><a href='https://commons.wikimedia.org/wiki/File:Beijing_Forbidden_City_Imperial_Guardian_Lions.jpg' target='blank'>" + 
-	// 			"<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Beijing_Forbidden_City_Imperial_Guardian_Lions.jpg/450px-Beijing_Forbidden_City_Imperial_Guardian_Lions.jpg' width='150px' height='200px'/>" +
-	// 			"</a></center>"
-	// 	});
-	// });		
-
-		
 	</script>
-	
-	
+		
   </body>
 </html>
