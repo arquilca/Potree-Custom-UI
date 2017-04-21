@@ -1,5 +1,5 @@
 body {
-	background-color: #eee;
+	background-color: #000;
 	/*background-image: url(img/capture.png);*/
 	display: -webkit-flex;
 	display: flex;
@@ -69,11 +69,13 @@ body {
 	z-index:	0;
 	overflow-y:	auto;
 	overflow: 	hidden;
-	background-color: rgba(255,255,255,0.2);
+	background-color:#337ab7;
+	 /*rgba(255,255,255,0.3);*/
 }
 
 #potree_sidebar_container a{
-	color: #337ab7;
+	color: #fff;
+	/*#337ab7;*/
 }
 	a:hover, a:visited, a:link, a:active{
 		color: 				#ccccff;
@@ -98,7 +100,8 @@ body {
 }
 
 .nav-icon {
-	color: #337ab7;
+	color: #fff;
+	/*#337ab7;*/
 	display: flex;
 	flex-flow: column;
 	position: relative;
