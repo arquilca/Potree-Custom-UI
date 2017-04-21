@@ -91,7 +91,7 @@
 		// });
 
 //TODO: Add general room transition and/or include escape button
-		viewer.setDescription("Pool and Pavilion");
+		viewer.setDescription("");
 
 		let sceneVZP = new Potree.Scene();
 		
@@ -99,37 +99,43 @@
 
 		Potree.loadPointCloud("../pointclouds/vizcaya1/cloud.js", "vizcaya1", e => {
 			sceneVZP.addPointCloud(e.pointcloud);
-			sceneVZP.view.position.set(19.89, 6.53, 15.84);
-			// sceneVZP.view.lookAt(new THREE.Vector3(1.22, 12.23, -3.68));	//keep for left door
+			viewer.fitToScreen();
 
 
-//TODO: Update so that camera angle begins in the middle of the room vs left
-			sceneVZP.addAnnotation([1.44, 6.45, -0.55], {
+//TODO: Usde camera position that redirects user back to outside of pool area - create "Overview" or "Reset" button
+			// sceneVZP.addAnnotation([4.50, 8.79, 15.27], {
+			// 	"cameraPosition": [40.20, -15.48, 20.63],
+			// 	"cameraTarget": [4.50, 8.79, 7.27],
+			// 	"title": "Pool and Pavilion"
+			// });
+
+
+			sceneVZP.addAnnotation([1.74, 6.21, -0.46], {
 				"title": "Ceiling Mosaic",
-				"cameraPosition": [1.96, 6.03, -0.78],
-				"cameraTarget": [1.96, 6.03,-0.78],
+				"cameraPosition": [1.74, 6.21, -0.46],
+				"cameraTarget": [1.733, 6.20, -0.46],
 				"description":"<center>Robert W. Chanler Painted Pool Ceiling Mosaic</center><br> Lorem ipsum dolor sit amet,  adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tincidunt nunc pulvinar sapien et ligula ullamcorper malesuada proin. <br><br>Ac placerat vestibulum lectus mauris. Arcu odio ut sem nulla. Id diam maecenas ultricies mi eget mauris pharetra et ultrices. Blandit volutpat maecenas volutpat blandit aliquam etiam erat velit.<br><br><center><a href='http://www.chrismillsconservation.com/vizcaya-museum-and-gardens.html' target='blank'>" + 
 				"<img src='http://www.chrismillsconservation.com/uploads/2/4/4/3/24434294/5060287_orig.jpg' width='500px' height='300px'/>" +
 				"</a></center>"
 			});
 
+//TODO: Get new point -this one rotates into wall
 			sceneVZP.addAnnotation([1.80, -1.51, 0.02], {
 				"cameraPosition": [1.80, -1.51, 0.02],
 				"cameraTarget": [1.79, -1.50, 0.02],
-				"title": "Doorway left",
+				"title": "View", //left doorway
 					"actions": [{
 					"icon": Potree.resourcePath + "/icons/goto.svg",
 					"onclick": function(){
-						sceneVZP.view.lookAt(new THREE.Vector3(1.80, -1.51, 0.02));
+						sceneVZP.view.lookAt(new THREE.Vector3(1.79, -1.50, 0.02));
 					}
 				}]
 			});
 
-//TODO: Correct camera rotation on pivot********************************************************
 			sceneVZP.addAnnotation([-5.47, 4.51, 0.13], {
 				"cameraPosition": [-5.47, 4.51, 0.13],
-				"cameraTarget": [-5.47, 4.51, 0.13],
-				"title": "Doorway right",
+				"cameraTarget": [-5.37, 4.50, 0.13],
+				"title": "View", //right doorway
 					"actions": [{
 					"icon": Potree.resourcePath + "/icons/goto.svg",
 					"onclick": function(){
