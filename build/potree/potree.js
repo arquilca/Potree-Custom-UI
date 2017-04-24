@@ -1,6 +1,5 @@
 
 
-
 function Potree(){
 
 }
@@ -6134,7 +6133,7 @@ Potree.Annotation = function(scene, args = {}){
 	this.domElement.onmouseenter = () => {
 		this.setHighlighted(true);
 	};
-	
+
 	$(this.domElement).on("touchstart", e => {
 		this.setHighlighted(!this.isHighlighted);
 	});
@@ -17800,3 +17799,4 @@ class HoverMenu{
 	}
 
 };
+
