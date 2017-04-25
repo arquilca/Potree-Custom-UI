@@ -13,6 +13,7 @@ body {
 }
 
 
+
 /*
 /* CSS - Cascading Style Sheet */
 /* Palette color codes */
@@ -276,7 +277,10 @@ canvas {
 	margin:		2px 2px;
 	opacity:	0.5;
 }
-
+/*annotation icon*/
+svg text {
+   font-family: FontAwesome;
+}
 
 
 

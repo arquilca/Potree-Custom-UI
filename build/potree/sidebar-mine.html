@@ -57,7 +57,7 @@ if (!document.fullscreenElement && !document.mozFullScreenElement &&
 
 //***************************Sidebar actions**********************************//
   $('#back').hide();
-
+//bind dynamically generated div and click event to potree container 
   $('.potree_container').on("click", 'div.annotation', function(){ 
 	$('#back').show();
   	$('#about').hide();
