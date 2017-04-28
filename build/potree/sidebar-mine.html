@@ -2,34 +2,24 @@
 <div id="potree_sidebar_container">
 	<nav id="sidebar_root" class="navmenu">  
 		<ul class="text-center" style="list-style: none;">
-			<li id="home"><a href="../examples/vizcaya-pool.html"><span class="fa fa-home fa-4x nav-icon "></span>Home</a></li>
-			<li id="about"><a href="#"><i class="fa fa-list fa-4x nav-icon"></i>About</a></li>	
-			<li id="back"><a href="../examples/vizcaya-pool.html"><i class="fa fa-arrow-left fa-4x nav-icon"></i>Back</a></li>
-			<li id="Barge"><a href="../examples/vizcaya-pool.html"><img class="sidebar-images" src="http://placehold.it/150x100" alt="barge-icon"><Barge 1917></a></li>	
-			<li id="Barge"><a href="../examples/vizcaya-pool.html"><img class="sidebar-images" src="http://placehold.it/150x100" alt="barge-icon"><Barge Hi-Res></a></li>
-			<li id="Barge"><a href="../examples/vizcaya-pool.html"><img class="sidebar-images" src="http://placehold.it/150x100" alt="barge-icon"><Grotto Hi-Res></a></li>
-			<li id="Barge"><a href="../examples/vizcaya-pool.html"><img class="sidebar-images" src="http://placehold.it/150x100" alt="barge-icon"><Hermes></a></li>			
-			<li id="Barge"><a href="../examples/vizcaya-pool.html"><img class="sidebar-images" src="http://placehold.it/150x100" alt="barge-icon"><Hermes></a></li>	
-			<li id="full-screen"><a href="#"><i id ="fullscreen" class="fa fa-expand fa-4x nav-icon "></i>Fullscreen</a></li>
+			<li id="home"><a href="../examples/vizcaya-pool.html"><span class="fa fa-home fa-3x nav-icon "></span>Home</a></li>
+			<li id="about"><a href="#"><i class="fa fa-list fa-3x nav-icon"></i>About</a></li>	
+			<li id="back"><a href="../examples/vizcaya-pool.html"><i class="fa fa-arrow-left fa-3x nav-icon"></i>Back</a></li>	
+			<li id="downloads"><a href="#"><i class="fa fa-download fa-3x nav-icon"></i>Downloads</a></li>
+			<li id="full-screen"><a href="#"><i id ="fullscreen" class="fa fa-expand fa-3x nav-icon "></i>Fullscreen</a></li>
 			<li id="help"><a href="#"><i class="fa fa-question-circle fa-4x nav-icon"></i>Help</a></li>
-		</ul>
-			<button>Toggle</button>
-			<p>Hello</p>
-			<p style="display: none">Good Bye</p>    
+		</ul>    
 	</nav>
+</div>
 
-	<div id="about-overlay" class="overlay overlay-huge">  
-		<h2>Lorem Ipsum Museum</h2>
-		<img src="http://placehold.it/350x150" alt="Image here">
-		<p>Bacon ipsum dolor amet venison fatback capicola picanha ham hock sausage. Short ribs jowl ham hock beef. Rump beef ribs jowl frankfurter flank cupim. Cow hamburger rump pancetta.</p>
-		<br>
-		<p>Capicola chuck tongue shankle pork chop, jerky pork. Andouille rump burgdoggen pork chop shank meatloaf biltong ham porchetta venison. Pork bresaola pork loin tongue pastrami tri-tip. Porchetta venison meatball meatloaf salami chicken tenderloin spare ribs. T-bone bacon landjaeger ribeye swine boudin shankle strip steak porchetta leberkas.</p>
-		<br>
-		<p>Tail bresaola cow drumstick. Ham hock shankle meatball spare ribs pork loin, boudin short loin filet mignon alcatra sirloin beef ribs. Leberkas shank ham hock, t-bone bacon beef ribs sausage ground round tail burgdoggen doner rump corned beef. Rump tenderloin biltong, pork loin capicola pastrami strip steak tri-tip flank chuck landjaeger venison doner beef ribs filet mignon. Ham hock landjaeger rump porchetta burgdoggen ball tip. Venison flank chicken pork loin tongue jowl, bresaola shank picanha tri-tip sausage sirloin filet mignon kielbasa frankfurter.</p></div>
-	</div>
-
-
-
+	<!--<nav id="sidebar_simple" class="navmenu">  
+		<ul class="text-center" style="list-style: none;">
+			<li><a href="#"><span class="fa fa-home fa-3x nav-icon "></span>Home</a></li>
+			<li><a href="#"><i class="fa fa-arrow-left fa-3x nav-icon"></i>Back</a></li>	
+			<li><a href="#"><i id ="fullscreen" class="fa fa-expand fa-3x nav-icon "></i>Fullscreen</a></li>
+			<li><a href="#"><i class="fa fa-question-circle fa-4x nav-icon"></i>Help</a></li>
+		</ul>    
+	</nav>-->
 
 <script>
 
@@ -67,36 +57,12 @@ if (!document.fullscreenElement && !document.mozFullScreenElement &&
 
 //***************************Sidebar actions**********************************//
   $('#back').hide();
-  $('#home-overlay').hide();
 //bind dynamically generated div and click event to potree container 
   $('.potree_container').on("click", 'div.annotation', function(){ 
 	$('#back').show();
   	$('#about').hide();
   	$('#downloads').hide();
 });
-
-//***About Toggle***//
-//   $('.potree_container').on("click", '#about', function(){ 
-// 	$('#home-overlay').show();
-// });
-
-
-//trying to have overlay to show when the about li is clicked
-// $(".about-overlay").click(function(){
-// 	//tip from Abraham
-// 	console.log("overlay-link clicked");
-//     // $(this).closest("div").next("#about-overlay").toggle();
-// 	$("div.about-overlay").toggle();
-// });
-
-//works correctly TODO: target problems in overlay styes on potree.css
-$(document).ready(function(){
-$( "#about" ).click(function() {
-  $( "div.overlay" ).toggle();
-});
-})
-
-
 
 </script>
 

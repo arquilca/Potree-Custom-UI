@@ -7,7 +7,7 @@ body {
 	align-items: center;
 	-webkit-justify-content: center;
 	justify-content: center;
-	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-size: 18px;
 	margin: 	0; 
 	padding: 	0;
 }
@@ -64,7 +64,8 @@ body {
 	top: 0;
 	left: 0;
 	padding: 0;
-	max-width: 175px;
+	max-width: 113px;
+	text-align: center;
 	height: 100%;
 	z-index:	0;
 	overflow-y:	auto;
@@ -75,7 +76,6 @@ body {
 
 #potree_sidebar_container a{
 	color: #fff;
-	font-size: 17px;
 	/*#337ab7;*/
 }
 	a:hover, a:visited, a:link, a:active{
@@ -87,7 +87,7 @@ body {
 	position: 	absolute;
 	top: 		0px;
 	bottom: 	0px;
-	left: 		175px;
+	left: 		113px;
 	right: 		0px;
 	overflow: 	hidden;
 	z-index: 	1;
@@ -123,68 +123,15 @@ nav li a {
 	}
 		
 nav ul {
-	padding:0px;
-}
+	padding:0 10px;
+	margin-left: 5%;
 
-/*Turn on if downsizing # of images in nav*/
-/*nav ul li:last-child {
+}
+nav ul li:last-child {
   position: absolute;
   bottom: 10px;
   margin-left: 8%;
-}*/
-
-.sidebar-images {
-	max-height: 100%;
-	max-width: 100%;
-	overflow: hidden;
 }
-
-
-/*******************Cverlay*******************/
-.overlay{
-	position: fixed;
-	width: 100%;
-	height: 100%;
-	top: 0;
-	left: 175px;
-	background: rgba(255,255,255,0.9);
-	z-index: 1000;
-}
-.overlay img {
-	width: 100%;
-	height:100%;
-}
-
-.overlay label{
-	width: 58px;
-	height:58px;
-	position: absolute;
-	right: 20px;
-	top: 20px;
-	background: url('http://tympanus.net/Development/FullscreenOverlayStyles/img/cross.png');
-	z-index: 100;
-  cursor:pointer;
-}
-
-.overlay p {
-	text-align: center;
-	position: relative;
-	top: 50%;
-	height: 60%;
-	font-size: 54px;
-	-webkit-transform: translateY(-50%);
-	transform: translateY(-50%);
-}
-
-.overlay-hugeinc div{
-	opacity: 0.4;
-	-webkit-transform: translateY(-25%) rotateX(35deg);
-	transform: translateY(-25%) rotateX(35deg);
-	-webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
-	transition: transform 0.5s, opacity 0.5s;
-	-moz-perspective: 300px;
-}
-
 
 /*******************CANVAS*******************/
 .canvas{

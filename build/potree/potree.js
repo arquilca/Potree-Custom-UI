@@ -13751,7 +13751,7 @@ Potree.Viewer = class PotreeViewer extends THREE.EventDispatcher{
 		if(isVisible){
 			renderArea.css("left", "0px");
 		}else{
-			renderArea.css("left", "175px");
+			renderArea.css("left", "113px");
 		}
 	};
 	
@@ -13765,7 +13765,7 @@ Potree.Viewer = class PotreeViewer extends THREE.EventDispatcher{
 		var sidebarContainer = $('#potree_sidebar_container');
 		sidebarContainer.load(new URL(Potree.scriptPath + "/sidebar-mine.html").href, () => {
 			
-			sidebarContainer.css("width", "175px");
+			sidebarContainer.css("width", "113px");
 			sidebarContainer.css("height", "100%");
 //MAP and Menu not used
 			// var imgMenuToggle = document.createElement("img");
