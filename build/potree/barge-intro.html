@@ -49,8 +49,7 @@
 			<div id="potree_description" class="potree_info_text"></div>
 		</div>
 
-		<div id="potree_sidebar_container">
-		</div>
+		<div id="potree_sidebar_container"></div>
 
 
     </div>
@@ -77,70 +76,15 @@
 			$("#menu_tools").next().show();
 			//viewer.toggleSidebar();
 		});
-
 		
-		
-		//ORIGINAL for reference
-		// Potree.loadPointCloud("../pointclouds/vizcaya1/cloud.js", "vizcaya1", e => {
-		// 	viewer.scene.addPointCloud(e.pointcloud);
-		// 	viewer.fitToScreen();
-		// });
-
-		viewer.setDescription("");
-
-		let sceneVZP = new Potree.Scene();
-		
-		viewer.setScene(sceneVZP);		
-
-		Potree.loadPointCloud("../pointclouds/vizcaya1/cloud.js", "vizcaya1", e => {
-			sceneVZP.addPointCloud(e.pointcloud);
+//TODO: See if there is a way to switch from page to page without having to refresh the entire page		
+		Potree.loadPointCloud("../pointclouds/barge/cloud.js", "barge", function(e) {
+			viewer.scene.addPointCloud(e.pointcloud);
 			viewer.fitToScreen();
-
-
-//TODO: Display/Fix svg icon in description
-			sceneVZP.addAnnotation([1.74, 6.21, -0.46], {
-				"cameraPosition": [1.74, 6.21, -0.46],
-				"cameraTarget": [1.733, 6.20, -0.46],
-				"description":"<center>Robert W. Chanler Painted Pool Ceiling Mosaic</center><br> Lorem ipsum dolor sit amet,  adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tincidunt nunc pulvinar sapien et ligula ullamcorper malesuada proin.<br><br> <center><a href='http://www.chrismillsconservation.com/vizcaya-museum-and-gardens.html' target='blank'>" + 
-				"<img src='http://www.chrismillsconservation.com/uploads/2/4/4/3/24434294/5060287_orig.jpg' width='500px' height='250px'/>" +
-				"</a></center>",
-				"title": "Ceiling Mosaic",
-				"actions": [{
-					"icon":  Potree.resourcePath + "/icons/info.svg",
-					"onclick": function(){
-						sceneVZP.view.lookAt(new THREE.Vector3(1.733, 6.20, -0.46));
-					}
-				}]
-			});
-
-//TODO: Get better coordinates -this set slightly rotates into wall
-			sceneVZP.addAnnotation([1.80, -1.51, 0.02], {
-				"cameraPosition": [1.80, -1.51, 0.02],
-				"cameraTarget": [1.79, -1.50, 0.02],
-				"title": "View", //left doorway
-					"actions": [{
-					"icon": Potree.resourcePath + "/icons/goto.svg",
-					"onclick": function(){
-						sceneVZP.view.lookAt(new THREE.Vector3(1.79, -1.50, 0.02));
-					}
-				}]
-			});
-
-			sceneVZP.addAnnotation([-5.47, 4.51, 0.13], {
-				"cameraPosition": [-5.47, 4.51, 0.13],
-				"cameraTarget": [-5.37, 4.50, 0.13],
-				"title": "View", //right doorway
-					"actions": [{
-					"icon": Potree.resourcePath + "/icons/goto.svg",
-					"onclick": function(){
-						sceneVZP.view.lookAt(new THREE.Vector3(-5.47, 4.51, 0.13));
-					}
-				}]
-			});
-});
-
-
-	</script>
+		});
 		
+	</script>
+	
+	
   </body>
 </html>
